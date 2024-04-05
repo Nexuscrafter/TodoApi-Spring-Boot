@@ -21,6 +21,8 @@ public class TodoController {
     // Error message when the todo is not found
     private static final String TODO_NOT_FOUND = "Todo not found";
 
+    //application of dependency injection
+    // spring will inject the dependency of todoService object in the TodoController constructor as we annotated TodoService as component/service
     public TodoController(
             @Qualifier("anotherTodoService") TodoService todoService,
             @Qualifier("fakeTodoService")  TodoService todoservice2) {
